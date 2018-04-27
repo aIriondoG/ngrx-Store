@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Modal</ion-title>
+    <ion-buttons end>
+      <button ion-button (click)="closeModal()">Close</button>
+    </ion-buttons>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <!--  
+    <ion-list *ngFor="let e of gente | async">
+    {{e}}
+  </ion-list>
+-->
+<ion-item>
+  {{gente.name}}
+</ion-item>
+
+</ion-content>

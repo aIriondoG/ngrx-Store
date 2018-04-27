@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Ionic Blank
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div>Current Gente: {{ personas$ | async }}</div>
+  <button ion-button (click)="ver()">Ver gente</button>
+  <p>Prueba NGRX</p>
+  <div>Current Horas: {{ horas$ | async }}</div>
+  <button ion-button (click)="increment()">Increment</button>
+  <button ion-button (click)="decrement()">Decrement</button>
+  <button ion-button (click)="reset()">Reset Counter</button>
+  <div>Current PALABRAS: {{a$ | async}}</div>
+  <!--  <div *ngFor="let p of personas$">{{p}}</div>-->
+  <ion-item>
+    <ion-label floating>
+      Mensaje*:
+    </ion-label>
+    <ion-input [(ngModel)]="mensaje" name="email" type="text" autocapitalize="off" required></ion-input>
+  </ion-item>
+  <button ion-button (click)="arrar()">Texto</button>
+  <button ion-button (click)="anadir()">Añadir gente</button>
+  <button ion-button block (click)="openModal(personas$)">Abrir modal</button>
+
+</ion-content>
